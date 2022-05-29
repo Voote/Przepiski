@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyledLabel } from './MainLabel.styles';
-import { LabelSection, UnderLine } from 'components/templates/MainTemplate.styles';
+import { LabelSection } from 'views/Landing.styles';
+import { StyledLabel, UnderLine } from './MainLabel.styles';
 
 const MainLabel = ({ label }) => (
   <LabelSection>

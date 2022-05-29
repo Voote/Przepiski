@@ -1,7 +1,7 @@
 import { MdStarOutline } from 'react-icons/md';
 import { MdStar } from 'react-icons/md';
 
-export const difficultyLevel = [
+export const difficultyIcons = [
   <div>
     <MdStarOutline />
     <MdStarOutline />

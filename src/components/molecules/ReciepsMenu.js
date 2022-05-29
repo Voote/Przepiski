@@ -1,6 +1,6 @@
 import React from 'react';
 import labels from 'assets/labels';
-import { LabelSection } from 'components/templates/MainTemplate.styles';
+import { LabelSection } from 'views/Landing.styles';
 import MenuIcon from 'components/atoms/MenuIcon';
 import { Wrapper } from './ReciepsMenu.styles';
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LabelSection } from 'components/templates/MainTemplate.styles';
 import { GiTiedScroll } from 'react-icons/gi';
-import MainLabel from './MainLabel';
+import MainLabel from 'components/molecules/MainLabel';
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.white};

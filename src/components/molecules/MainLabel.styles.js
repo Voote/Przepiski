@@ -6,3 +6,8 @@ export const StyledLabel = styled.h2`
   margin-top: 1em;
   text-align: center;
 `;
+
+export const UnderLine = styled.div`
+  border-bottom: 3px solid black;
+`;
+
