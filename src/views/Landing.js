@@ -1,7 +1,7 @@
 import React from 'react';
 import labels from 'assets/labels';
 import { loremIpsum10s } from 'assets/loremIpsum';
-import IngridientsReciepe from 'components/molecules/IngridientsReciepe';
+import IngridientsAndReciepe from 'components/organisms/IngridientsAndReciepe';
 import ReciepsMenu from 'components/molecules/ReciepsMenu';
 import ReciepTime from 'components/molecules/ReciepTime';
 import MainLabel from 'components/molecules/MainLabel';
@@ -22,7 +22,7 @@ const Landing = () => (
       <ReciepDifficulty label={labels.parametersDificulty} score={2} />
     </LabelSection>
 
-    <IngridientsReciepe label={labels.ingridientsReciepe} />
+    <IngridientsAndReciepe label={labels.ingridientsReciepe} />
     <Content>{loremIpsum10s}</Content>
   </Wrapper>
 );

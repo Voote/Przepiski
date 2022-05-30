@@ -144,3 +144,35 @@ Vel orci porta non pulvinar neque. Vulputate enim nulla aliquet porttitor.
 Sed adipiscing diam donec adipiscing. 
 Quam pellentesque nec nam aliquam sem et tortor consequat. 
 Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet.`;
+
+export const loremIpsum2p = `
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Convallis a cras semper auctor neque. Aenean vel elit scelerisque mauris. 
+Eleifend quam adipiscing vitae proin sagittis nisl. 
+Leo vel fringilla est ullamcorper eget nulla. Sagittis id consectetur purus ut. 
+Amet volutpat consequat mauris nunc. Netus et malesuada fames ac turpis egestas. 
+Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. 
+Diam in arcu cursus euismod quis viverra nibh cras. Nunc mattis enim ut tellus. 
+Vel turpis nunc eget lorem dolor sed viverra. Elit sed vulputate mi sit. 
+In arcu cursus euismod quis viverra nibh cras pulvinar. 
+Ac odio tempor orci dapibus ultrices. Rhoncus aenean vel elit scelerisque mauris. 
+Nam at lectus urna duis convallis convallis tellus id interdum. 
+Facilisis mauris sit amet massa vitae tortor. 
+
+Senectus et netus et malesuada fames ac turpis. 
+Neque ornare aenean euismod elementum nisi. Nec sagittis aliquam malesuada bibendum. 
+Augue lacus viverra vitae congue eu consequat ac. 
+Vel pretium lectus quam id. Nisl vel pretium lectus quam id leo in vitae. 
+Morbi tristique senectus et netus et malesuada fames ac. 
+Tincidunt tortor aliquam nulla facilisi cras fermentum odio. 
+Duis ultricies lacus sed turpis tincidunt id. Quam elementum pulvinar etiam non. 
+Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. 
+Sit amet risus nullam eget felis eget nunc lobortis. 
+Est ultricies integer quis auctor elit sed vulputate mi. 
+Non nisi est sit amet facilisis magna etiam tempor orci. 
+Ullamcorper dignissim cras tincidunt lobortis. Id interdum velit laoreet id donec.
+Consectetur libero id faucibus nisl tincidunt. 
+Elit scelerisque mauris pellentesque pulvinar pellentesque. 
+Aenean euismod elementum nisi quis eleifend.
+`;
