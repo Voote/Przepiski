@@ -6,7 +6,7 @@ import ReciepTime from 'components/molecules/ReciepsTime/ReciepTime';
 import MainLabel from 'components/molecules/MainLabel/MainLabel';
 import { LabelSection, TopChin } from 'views/Landing.styles';
 
-const Reciepes = ({ name, category, time, lvl }) => {
+const Reciepe = ({ name, category, time, lvl }) => {
   const wstawka =
     category.length > 1 ? (
       <MainLabel>
@@ -28,4 +28,4 @@ const Reciepes = ({ name, category, time, lvl }) => {
   );
 };
 
-export default Reciepes;
+export default Reciepe;
