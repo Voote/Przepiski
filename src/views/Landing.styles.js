@@ -10,11 +10,12 @@ export const LabelSection = styled.div`
   justify-content: center;
 `;
 
-export const Parametr = styled.h3`
-  padding: 0rem 1.5rem;
-  font-weight: normal;
-  margin-block-start: 0.5rem;
-  margin-block-end: 0.5rem;
-  font-size: ${({ theme }) => theme.fontSize.s};
-  font-weight: 400;
+export const IngridientsWrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.white};
+  position: relative;
+  overflow: hidden;
+`;
+
+export const TopChin = styled.div`
+  padding-top: 2rem;
 `;

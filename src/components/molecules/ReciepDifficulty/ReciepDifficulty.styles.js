@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Parametr } from 'views/Landing.styles';
+import { Parametr } from 'components/atoms/Parametr/Parametr';
 
 export const Level = styled(Parametr)`
   display: flex;

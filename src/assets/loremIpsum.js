@@ -1,4 +1,5 @@
-export const loremIpsum10s = `Lorem ipsum dolor sit amet, 
+export const loremIpsum10s = `
+Lorem ipsum dolor sit amet, 
 consectetur adipiscing elit, 
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 Fringilla urna porttitor rhoncus dolor purus non enim. 
@@ -143,7 +144,8 @@ Bibendum neque egestas congue quisque egestas diam.
 Vel orci porta non pulvinar neque. Vulputate enim nulla aliquet porttitor. 
 Sed adipiscing diam donec adipiscing. 
 Quam pellentesque nec nam aliquam sem et tortor consequat. 
-Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet.`;
+Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet.
+`;
 
 export const loremIpsum2p = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -175,4 +177,19 @@ Ullamcorper dignissim cras tincidunt lobortis. Id interdum velit laoreet id done
 Consectetur libero id faucibus nisl tincidunt. 
 Elit scelerisque mauris pellentesque pulvinar pellentesque. 
 Aenean euismod elementum nisi quis eleifend.
+`;
+
+export const loremIpsum1p = `
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Et sollicitudin ac orci phasellus egestas. Vivamus at augue eget arcu dictum varius duis at. 
+A pellentesque sit amet porttitor. Sagittis id consectetur purus ut faucibus. 
+Tincidunt ornare massa eget egestas purus viverra accumsan in. 
+A arcu cursus vitae congue mauris. Feugiat in ante metus dictum at. 
+Rutrum quisque non tellus orci ac auctor. Sem viverra aliquet eget sit amet tellus. 
+Magna ac placerat vestibulum lectus. Urna porttitor rhoncus dolor purus non enim. 
+Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. 
+Non tellus orci ac auctor augue mauris augue. Placerat in egestas erat imperdiet sed. 
+Id leo in vitae turpis massa sed elementum tempus egestas. 
+Neque sodales ut etiam sit amet nisl purus in.
 `;
