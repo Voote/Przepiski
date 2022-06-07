@@ -16,6 +16,6 @@ export const IngridientsWrapper = styled.div`
   overflow: hidden;
 `;
 
-export const TopChin = styled.div`
-  padding-top: 2rem;
+export const BorderChin = styled.div`
+  border-bottom: 1vh solid ${({ theme }) => theme.colors.darkGreen};
 `;
