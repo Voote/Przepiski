@@ -1,12 +1,11 @@
 import React from 'react';
-import { LabelSection } from 'views/Landing.styles';
+import { LabelSection } from 'components/atoms/LabelSection/LabelSection';
 import { StyledLabel, UnderLine } from './MainLabel.styles';
 
 const MainLabel = ({ children }) => (
   <LabelSection>
     <StyledLabel>
-      {children}
-      <UnderLine />
+      <UnderLine>{children}</UnderLine>
     </StyledLabel>
   </LabelSection>
 );

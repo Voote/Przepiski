@@ -5,4 +5,5 @@ module.exports = {
   ingridientsReciepe: 'Skladniki i wykonanie',
   parametersTime: 'Czas: ',
   parametersDificulty: 'Trudnosc:',
+  clickMe: 'Click Me',
 };

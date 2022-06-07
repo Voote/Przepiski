@@ -5,15 +5,16 @@ import CustomModal from 'components/organisms/Modal/Modal';
 import MainLabel from 'components/molecules/MainLabel/MainLabel';
 import ReciepeIngridients from 'components/atoms/ReciepeIngridients/ReciepeIngridients';
 import { VerticalButton } from 'components/atoms/Button/Button';
-import { IngridientsWrapper } from 'views/Landing.styles';
+import { IngridientsWrapper } from './Ingridients.styles';
 
 const Ingridients = () => {
   const { isOpen, handleOpenModal, handleCloseModal } = useModal();
+
   return (
     <IngridientsWrapper>
       <CustomModal isOpen={isOpen} handleClose={handleCloseModal} />
       <MainLabel>{labels.ingridientsReciepe}</MainLabel>
-      <VerticalButton onClick={handleOpenModal}>Click me</VerticalButton>
+      <VerticalButton onClick={handleOpenModal}>{labels.clickMe}</VerticalButton>
       <ReciepeIngridients />
     </IngridientsWrapper>
   );

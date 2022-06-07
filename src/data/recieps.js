@@ -1,15 +1,25 @@
 import { loremIpsum1p } from 'assets/loremIpsum';
 
 const category = {
-  breakfast: 'sniadanie',
-  coctail: 'koktajl',
-  dinner: 'obiad',
-  pastries: 'wypieki',
-  salad: 'salatka',
-  soup: 'zupa',
-  juice: 'sok',
-  dessert: 'deser',
+  breakfast: 'SNIADANIE',
+  coctail: 'KOKTAJL',
+  dinner: 'OBIAD',
+  pastries: 'WYPIEKI',
+  salad: 'SALATKA',
+  soup: 'ZUPA',
+  juice: 'SOK',
+  dessert: 'DESER',
 };
+// const category = {
+//     breakfast: 'Sniadanie',
+//     coctail: 'Koktajl',
+//     dinner: 'Obiad',
+//     pastries: 'Wypieki',
+//     salad: 'Salatka',
+//     soup: 'Zupa',
+//     juice: 'Sok',
+//     dessert: 'Deser',
+//   };
 
 const time = {
   m15: 15,

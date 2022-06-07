@@ -1,7 +1,7 @@
 import React from 'react';
 import labels from 'assets/labels';
-import { LabelSection } from 'views/Landing.styles';
 import MenuIcon from 'components/atoms/MenuIcon/MenuIcon';
+import { LabelSection } from 'components/atoms/LabelSection/LabelSection';
 import { Wrapper } from './ReciepsMenu.styles';
 
 const ReciepsMenu = () => (

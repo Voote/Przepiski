@@ -1,11 +1,4 @@
-import React from 'react';
 import styled from 'styled-components';
-
-const scrollPos = () => {
-  const offsetY = window.pageYOffset;
-  console.log({ offsetY });
-  return offsetY;
-};
 
 export const Button = styled.button`
   display: table;
@@ -29,7 +22,3 @@ export const VerticalButton = styled(Button)`
   overflow: hidden;
   transform-origin: right;
 `;
-
-export const TemporaryButton = ({ text }) => (
-  <VerticalButton onClick={() => scrollPos()}>{text}</VerticalButton>
-);

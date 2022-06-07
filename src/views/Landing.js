@@ -1,35 +1,36 @@
 import React from 'react';
-import { recieps } from 'data/recieps';
-import { loremIpsum10s } from 'assets/loremIpsum';
+// import { recieps } from 'data/recieps';
+import { loremIpsum2p } from 'assets/loremIpsum';
+import { BorderChin, Wrapper } from 'views/Landing.styles';
+import { Content } from 'components/atoms/Content/Content';
+import Reciepe from 'components/organisms/Reciepe/Reciepe';
 import ReciepsMenu from 'components/molecules/ReciepsMenu/ReciepsMenu';
 import Ingridients from 'components/organisms/Ingridients/Ingridients';
-import Reciepe from 'components/organisms/Reciepe/Reciepe';
-import { Content } from 'components/atoms/Content/Content';
-import { BorderChin, Wrapper } from 'views/Landing.styles';
 
 const numGenerator = (max) => Math.floor(Math.random() * max);
 let number = numGenerator(100);
 
-const Landing = () => (
+const Landing = ({ data }) => (
   <Wrapper>
+    {console.log(data)}
     <ReciepsMenu />
-    {recieps.map((reciepe) => {
+    {data.map((reciepe) => {
       number = number * numGenerator(20);
       const hexNumber = number.toString(16);
       return (
         <BorderChin key={reciepe.name}>
           <Reciepe
             name={reciepe.name}
-            category={reciepe.type}
-            time={reciepe.prepTime}
-            lvl={reciepe.difficulty}
+            category={reciepe.category}
+            time={reciepe.time}
+            lvl={reciepe.level}
             hashNum={hexNumber}
           />
           <Ingridients />
         </BorderChin>
       );
     })}
-    <Content>{loremIpsum10s}</Content>
+    <Content>{loremIpsum2p}</Content>
   </Wrapper>
 );
 

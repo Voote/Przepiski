@@ -5,8 +5,14 @@ export const StyledLabel = styled.h2`
   font-weight: 500;
   margin-top: 1rem;
   text-align: center;
+  span {
+    padding: 0 1vw;
+  }
 `;
 
 export const UnderLine = styled.div`
-  border-bottom: 3px solid black;
+  span {
+    border-bottom: 2px solid black;
+    padding-bottom: 0.2rem;
+  }
 `;
