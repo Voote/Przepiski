@@ -3,17 +3,6 @@ import Landing from 'views/Landing';
 import { Logo } from 'components/atoms/Logo/Logo';
 import { useQuery } from 'graphql-hooks';
 
-// const HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
-//   {
-//     allNewReciepes {
-//       reciepeName
-//       category
-//       duration
-//       level
-//     }
-//   }
-// }`;
-
 const query = `
 {
   allNewReciepes {
@@ -21,6 +10,7 @@ const query = `
     category
     time
     level
+    ingridients
   }
 }  
 `;

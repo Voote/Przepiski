@@ -12,8 +12,8 @@ let number = numGenerator(100);
 
 const Landing = ({ data }) => (
   <Wrapper>
-    {console.log(data)}
     <ReciepsMenu />
+    {console.log(data)}
     {data.map((reciepe) => {
       number = number * numGenerator(20);
       const hexNumber = number.toString(16);
@@ -26,7 +26,7 @@ const Landing = ({ data }) => (
             lvl={reciepe.level}
             hashNum={hexNumber}
           />
-          <Ingridients />
+          <Ingridients ingridients={reciepe.ingridients} />
         </BorderChin>
       );
     })}

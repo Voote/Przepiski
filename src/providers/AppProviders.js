@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { ClientContext, GraphQLClient } from 'graphql-hooks';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
-import { ClientContext, GraphQLClient } from 'graphql-hooks';
 
 const API_TOKEN = '1951545a200867e3484c713bc36213';
 
