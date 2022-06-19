@@ -4,8 +4,8 @@ import MainLabel from 'components/molecules/MainLabel/MainLabel';
 import ReciepTime from 'components/molecules/ReciepsTime/ReciepTime';
 import ReciepDifficulty from 'components/molecules/ReciepDifficulty/ReciepDifficulty';
 import { LoremSpace400300 } from 'components/atoms/ReciepeImg/ReciepeImg';
-import { Parametr } from 'components/atoms/Parametr/Parametr';
-import { ParametersSection } from './Reciepe.styles';
+import { ParametersSection, PersonIcon } from './Reciepe.styles';
+import { MdPerson } from 'react-icons/md';
 
 const Reciepe = ({
   name = 'Noname',
@@ -25,7 +25,10 @@ const Reciepe = ({
       <span>{name}</span>
     </MainLabel>
     <ParametersSection>
-      <Parametr>4 P</Parametr>
+      <PersonIcon>
+        <span>2</span>
+        <MdPerson id="person" />
+      </PersonIcon>
       <ReciepTime label={labels.parametersTime} time={time} />
       <ReciepDifficulty label={labels.parametersDificulty} score={lvl} />
     </ParametersSection>

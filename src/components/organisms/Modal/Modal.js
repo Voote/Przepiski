@@ -1,12 +1,14 @@
 import React from 'react';
-import Modal from 'react-modal';
+// import Modal from 'react-modal';
 import { loremIpsum2p } from 'assets/loremIpsum';
+import { StyledModal } from './Modal.styles';
+import { VerticalButton } from 'components/atoms/Button/Button';
 
 const close = 'close';
-const header = 'I am a modal';
+const header = 'Ingridients';
 
 const CustomModal = ({ handleClose, isOpen, children }) => (
-  <Modal
+  <StyledModal
     appElement={document.getElementById('root')}
     isOpen={isOpen}
     onRequestClose={handleClose}
@@ -16,7 +18,8 @@ const CustomModal = ({ handleClose, isOpen, children }) => (
     <button onClick={handleClose}>{close}</button>
     <h2>{header}</h2>
     <div>{loremIpsum2p}</div>
-  </Modal>
+    <VerticalButton>Instructions</VerticalButton>
+  </StyledModal>
 );
 
 export default CustomModal;

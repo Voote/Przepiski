@@ -13,12 +13,28 @@ export const Button = styled.button`
 `;
 
 export const VerticalButton = styled(Button)`
-  position: absolute;
-  padding: 2vw 4vw;
+  position: fixed;
+  padding: 0.5vw 4vw;
   transform: rotate(-90deg);
-  right: 5vw;
-  top: 1vh;
+  right: 4vw;
+  top: 25vh;
   border-radius: 20px 20px 0px 0px;
   overflow: hidden;
   transform-origin: right;
+  opacity: 90%;
+  z-index: 1031;
+  :hover {
+    animation: 3s ease 0s normal forwards 1 fadein;
+    @keyframes fadein {
+      0% {
+        opacity: 1;
+      }
+      66% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
 `;
