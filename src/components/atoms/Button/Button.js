@@ -21,9 +21,9 @@ export const VerticalButton = styled(Button)`
   border-radius: 20px 20px 0px 0px;
   overflow: hidden;
   transform-origin: right;
-  opacity: 90%;
+  opacity: 70%;
   z-index: 1031;
-  :hover {
+  /* :hover {
     animation: 3s ease 0s normal forwards 1 fadein;
     @keyframes fadein {
       0% {
@@ -36,5 +36,5 @@ export const VerticalButton = styled(Button)`
         opacity: 0;
       }
     }
-  }
+  } */
 `;

@@ -11,6 +11,7 @@ const query = `
     time
     level
     ingridients
+    pierwszy
   }
 }  
 `;
