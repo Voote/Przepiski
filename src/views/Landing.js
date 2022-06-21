@@ -1,5 +1,4 @@
 import React from 'react';
-// import { recieps } from 'data/recieps';
 import { loremIpsum2p } from 'assets/loremIpsum';
 import { BorderChin, Wrapper } from 'views/Landing.styles';
 import { Content } from 'components/atoms/Content/Content';
