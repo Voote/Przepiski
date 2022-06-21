@@ -26,7 +26,10 @@ const Landing = ({ data }) => (
             lvl={reciepe.level}
             hashNum={hexNumber}
           />
-          <Ingridients ingridients={reciepe.ingridients} />
+          <Ingridients
+            ingridients={reciepe.ingridients}
+            skladniczki={reciepe.ingridientsy}
+          />
         </BorderChin>
       );
     })}

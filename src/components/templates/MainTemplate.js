@@ -11,7 +11,11 @@ const query = `
     time
     level
     ingridients
-    pierwszy
+    ingridientsy {
+      ilosc
+      unit
+      nazwaSkladnika
+    }
   }
 }  
 `;
