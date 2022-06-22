@@ -2,6 +2,7 @@ import React from 'react';
 import { loremIpsum2p } from 'assets/loremIpsum';
 import { StyledModal } from './Modal.styles';
 import { VerticalButton } from 'components/atoms/Button/Button';
+import labels from 'assets/labels';
 
 const close = 'close';
 const header = 'Ingridients';
@@ -17,7 +18,7 @@ const CustomModal = ({ handleClose, isOpen, children }) => (
     <button onClick={handleClose}>{close}</button>
     <h2>{header}</h2>
     <div>{loremIpsum2p}</div>
-    <VerticalButton>Instructions</VerticalButton>
+    <VerticalButton>{labels.ButtonInstructions}</VerticalButton>
   </StyledModal>
 );
 

@@ -10,6 +10,7 @@ import { MdPerson } from 'react-icons/md';
 const Reciepe = ({
   name = 'Noname',
   category = 'Nocat',
+  people = 2,
   time = 1,
   lvl,
   hashNum,
@@ -26,7 +27,7 @@ const Reciepe = ({
     </MainLabel>
     <ParametersSection>
       <PersonIcon>
-        <span>2</span>
+        <span>{people}</span>
         <MdPerson id="person" />
       </PersonIcon>
       <ReciepTime label={labels.parametersTime} time={time} />

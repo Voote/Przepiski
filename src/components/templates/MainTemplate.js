@@ -1,25 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Landing from 'views/Landing';
-import { Logo } from 'components/atoms/Logo/Logo';
+import ReciepsMenu from 'components/molecules/ReciepsMenu/ReciepsMenu';
+import { options } from 'assets/arrays';
 import { useQuery } from 'graphql-hooks';
+import { Logo } from 'components/atoms/Logo/Logo';
 
-const query = `
-{
-  allNewReciepes {
-    name
-    category
-    time
-    level
-    ingridients {
-      ilosc
-      unit
-      nazwaSkladnika
-    }
-  }
-}  
-`;
+export const UserContext = React.createContext();
 
 const MainTemplate = () => {
+  const [selectedOption, setSelectedOption] = useState(options[0]);
+  const query = `
+  {
+    allNewReciepes(filter: {category: {matches: {pattern: "${selectedOption.value}"}}}) {
+      name
+      category
+      time
+      level
+      ingridients {
+        ilosc
+        unit
+        nazwaSkladnika
+      }
+    }
+  }  
+  `;
+
   const { loading, error, data } = useQuery(query, {
     variables: {
       limit: 10,
@@ -32,6 +37,9 @@ const MainTemplate = () => {
   return (
     <>
       <Logo title="logo" />
+      <UserContext.Provider value={{ selectedOption, setSelectedOption }}>
+        <ReciepsMenu />
+      </UserContext.Provider>
       <Landing data={data.allNewReciepes} />
     </>
   );
