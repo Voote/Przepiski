@@ -1,5 +1,4 @@
 import React from 'react';
-// import Modal from 'react-modal';
 import { loremIpsum2p } from 'assets/loremIpsum';
 import { StyledModal } from './Modal.styles';
 import { VerticalButton } from 'components/atoms/Button/Button';

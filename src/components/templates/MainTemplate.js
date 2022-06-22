@@ -10,8 +10,7 @@ const query = `
     category
     time
     level
-    ingridients
-    ingridientsy {
+    ingridients {
       ilosc
       unit
       nazwaSkladnika

@@ -5,35 +5,14 @@ import CustomModal from 'components/organisms/Modal/Modal';
 import MainLabel from 'components/molecules/MainLabel/MainLabel';
 import ReciepeIngridients from 'components/atoms/ReciepeIngridients/ReciepeIngridients';
 import { Button } from 'components/atoms/Button/Button';
-import {
-  IngridientsWrapper,
-  StyledList,
-  StyledListItem,
-} from './Ingridients.styles';
+import { IngridientsWrapper } from 'components/organisms/Ingridients/Ingridients.styles';
+import IngridientList from 'components/molecules/IngridientsList/IngridientsList';
 
-const Ingridients = ({ ingridients, skladniczki }) => {
+const Ingridients = ({ ingridients }) => {
   const { isOpen, handleOpenModal, handleCloseModal } = useModal();
-  const isIngridients = (skladniczki.length && (
-    <StyledList>
-      {skladniczki.map((item) => (
-        <li key={item.nazwaSkladnika}>
-          <StyledListItem>
-            {item.ilosc}
-            {item.unit} {item.nazwaSkladnika}
-          </StyledListItem>
-        </li>
-      ))}
-    </StyledList>
-  )) ||
-    (Array.isArray(ingridients) && (
-      <StyledList>
-        {ingridients.map((item) => (
-          <li key={item}>
-            <StyledListItem>{item}</StyledListItem>
-          </li>
-        ))}
-      </StyledList>
-    )) || <ReciepeIngridients />;
+  const isIngridients = (ingridients.length && (
+    <IngridientList data={ingridients} />
+  )) || <ReciepeIngridients />;
 
   return (
     <IngridientsWrapper>

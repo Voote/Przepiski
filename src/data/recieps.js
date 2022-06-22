@@ -10,16 +10,6 @@ const category = {
   juice: 'SOK',
   dessert: 'DESER',
 };
-// const category = {
-//     breakfast: 'Sniadanie',
-//     coctail: 'Koktajl',
-//     dinner: 'Obiad',
-//     pastries: 'Wypieki',
-//     salad: 'Salatka',
-//     soup: 'Zupa',
-//     juice: 'Sok',
-//     dessert: 'Deser',
-//   };
 
 const time = {
   m15: 15,
