@@ -20,7 +20,7 @@ const Ingridients = ({ ingridients }) => {
       <div onClick={handleOpenModal}>
         <MainLabel>{labels.ingridientsReciepe}</MainLabel>
         {isIngridients}
-        <Button>{labels.clickMe}</Button>
+        <Button isBig>{labels.clickMe}</Button>
       </div>
     </IngridientsWrapper>
   );

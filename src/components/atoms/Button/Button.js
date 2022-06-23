@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   display: table;
-  margin: 15px auto;
-  padding: 7px 20px;
-  font-size: ${({ theme }) => theme.fontSize.l};
+  margin: ${({ isBig }) => (isBig ? '15px auto' : 'auto')};
+  padding: ${({ isBig }) => (isBig ? '7px 20px' : '2px 10px')};
+  font-size: ${({ isBig, theme: { fontSize } }) =>
+    isBig ? fontSize.l : fontSize.s};
   background-color: ${({ theme }) => theme.colors.green};
   border-radius: 20px;
   border: none;
@@ -14,28 +15,13 @@ export const Button = styled.button`
 
 export const VerticalButton = styled(Button)`
   position: fixed;
-  padding: 0.5vw 4vw;
+  padding: 1.25vw 4vw;
   transform: rotate(-90deg);
   right: 4vw;
   top: 25vh;
   border-radius: 20px 20px 0px 0px;
   overflow: hidden;
   transform-origin: right;
-  opacity: 20%;
+  opacity: 80%;
   z-index: 1031;
-  :active {
-    opacity: 80%;
-    /* animation: 3s ease 0s normal forwards 1 fadein; */
-    @keyframes fadein {
-      0% {
-        opacity: 1;
-      }
-      66% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-  }
 `;

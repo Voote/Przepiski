@@ -11,6 +11,6 @@ export const StyledModal = styled(Modal)`
   background-color: #777;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 1.4rem;
+  padding: 1rem 3rem 1rem 1.5rem;
   z-index: 1031;
 `;

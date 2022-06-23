@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import Landing from 'views/Landing';
 import ReciepsMenu from 'components/molecules/ReciepsMenu/ReciepsMenu';
-import { options } from 'assets/arrays';
 import { useQuery } from 'graphql-hooks';
+import { options } from 'assets/arrays';
+import { UserContext } from 'hooks/userContext';
 import { Logo } from 'components/atoms/Logo/Logo';
-
-export const UserContext = React.createContext();
 
 const MainTemplate = () => {
   const [selectedOption, setSelectedOption] = useState(options[0]);

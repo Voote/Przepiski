@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import MenuIcon from 'components/atoms/MenuIcon/MenuIcon';
 import { options } from 'assets/arrays';
-import { UserContext } from 'components/templates/MainTemplate';
+import { UserContext } from 'hooks/userContext';
 import { LabelSection } from 'components/atoms/LabelSection/LabelSection';
 import { CustomReactSelect, Wrapper } from './ReciepsMenu.styles';
 
@@ -16,6 +16,7 @@ const ReciepsMenu = () => {
           defaultValue={data.selectedOption}
           onChange={data.setSelectedOption}
           options={options}
+          menuColor="red"
         />
         <MenuIcon />
       </LabelSection>

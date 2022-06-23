@@ -14,14 +14,20 @@ export const Wrapper = styled.div`
 `;
 
 export const CustomReactSelect = styled(Select)`
-  padding-top: 0.3em;
-  color: ${({ theme }) => theme.colors.black};
-  background-color: red;
-  width: 10rem;
+  font-size: ${({ theme }) => theme.fontSize.l};
+  background-color: transparent;
+  width: 12.5rem;
+  p {
+    color: red;
+  }
   .Select__control {
-    background-color: lightblue;
+    background-color: transparent;
+    border: none;
   }
   .Select__menu {
-    background-color: gold;
+    background-color: ${({ theme }) => theme.colors.darkGreen};
+  }
+  .Select__indicator-separator {
+    background-color: inherit;
   }
 `;
