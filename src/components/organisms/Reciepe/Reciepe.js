@@ -6,6 +6,7 @@ import ReciepDifficulty from 'components/molecules/ReciepDifficulty/ReciepDiffic
 import { LoremSpace400300 } from 'components/atoms/ReciepeImg/ReciepeImg';
 import { ParametersSection, PersonIcon } from './Reciepe.styles';
 import { MdPerson } from 'react-icons/md';
+import { StyledImg } from 'components/atoms/ReciepeImg/ReciepeImg.styles';
 
 const Reciepe = ({
   name = 'Noname',
@@ -13,6 +14,7 @@ const Reciepe = ({
   people = 2,
   time = 1,
   lvl,
+  pic,
   hashNum,
 }) => (
   <div>
@@ -21,7 +23,11 @@ const Reciepe = ({
         <b>{category.toUpperCase()}</b>
       </span>
     </MainLabel>
-    <LoremSpace400300 hash={hashNum} />
+    {pic ? (
+      <StyledImg src={pic.url} alt="obrazek" />
+    ) : (
+      <LoremSpace400300 hash={hashNum} />
+    )}
     <MainLabel>
       <span>{name}</span>
     </MainLabel>

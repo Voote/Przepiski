@@ -13,7 +13,7 @@ const Landing = ({ data }) => (
     {console.log(data)}
     {data.map((reciepe) => {
       number = number * numGenerator(20);
-      const hexNumber = number.toString(16);
+      const hexNumber = number.toString(16) + 1;
       return (
         <BorderChin key={reciepe.name}>
           <Reciepe
@@ -21,6 +21,7 @@ const Landing = ({ data }) => (
             category={reciepe.category}
             time={reciepe.time}
             lvl={reciepe.level}
+            pic={reciepe.picture}
             hashNum={hexNumber}
           />
           <Ingridients ingridients={reciepe.ingridients} />

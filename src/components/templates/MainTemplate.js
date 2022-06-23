@@ -10,7 +10,7 @@ const MainTemplate = () => {
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const query = `
   {
-    allNewReciepes(filter: {category: {matches: {pattern: "${selectedOption.value}"}}}) {
+    allNewReciepes(orderBy: name_DESC, filter: {category: {matches: {pattern: "${selectedOption.value}"}}}) {
       name
       category
       time
@@ -19,6 +19,9 @@ const MainTemplate = () => {
         ilosc
         unit
         nazwaSkladnika
+      }
+      picture {
+        url
       }
     }
   }  
