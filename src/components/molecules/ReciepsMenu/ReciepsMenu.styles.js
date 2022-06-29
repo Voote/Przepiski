@@ -7,7 +7,8 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.green};
   color: ${({ theme }) => theme.colors.white};
   padding: 0.1rem;
-  z-index: 1001;
+  z-index: ${({ isModalOpen }) => (isModalOpen ? '0' : '1001')};
+  top: ${({ isScrolled }) => (isScrolled ? '0' : '')};
   h2 {
     font-size: ${({ theme }) => theme.fontSize.l};
     font-weight: 500;

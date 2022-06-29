@@ -2,6 +2,8 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { ClientContext, GraphQLClient } from 'graphql-hooks';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
+import { ScrollProvider } from 'hooks/useScroll';
+import { MenuProvider } from 'hooks/useMenu';
 import { theme } from 'assets/styles/theme';
 
 const API_TOKEN_DATO = '1951545a200867e3484c713bc36213';
@@ -22,8 +24,12 @@ const AppProviders = ({ children }) => {
   return (
     <ClientContext.Provider value={client}>
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        {children}
+        <MenuProvider>
+          <ScrollProvider>
+            <GlobalStyle />
+            {children}
+          </ScrollProvider>
+        </MenuProvider>
       </ThemeProvider>
     </ClientContext.Provider>
   );

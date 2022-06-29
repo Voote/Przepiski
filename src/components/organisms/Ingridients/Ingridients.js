@@ -1,15 +1,15 @@
-import React from 'react';
-import labels from 'assets/labels';
-import useModal from 'components/organisms/Modal/useModal';
-import CustomModal from 'components/organisms/Modal/Modal';
-import MainLabel from 'components/molecules/MainLabel/MainLabel';
-import IngridientsList from 'components/molecules/IngridientsList/IngridientsList';
-import ReciepeIngridients from 'components/atoms/ReciepeIngridients/ReciepeIngridients';
+import React, { useContext } from 'react';
+import { ModalContext } from 'hooks/userContext';
 import { Button } from 'components/atoms/Button/Button';
 import { IngridientsWrapper } from 'components/organisms/Ingridients/Ingridients.styles';
+import labels from 'assets/labels';
+import MainLabel from 'components/molecules/MainLabel/MainLabel';
+import CustomModal from 'components/organisms/Modal/Modal';
+import IngridientsList from 'components/molecules/IngridientsList/IngridientsList';
+import ReciepeIngridients from 'components/atoms/ReciepeIngridients/ReciepeIngridients';
 
 const Ingridients = ({ item }) => {
-  const { isOpen, handleOpenModal, handleCloseModal } = useModal();
+  const { isOpen, handleOpenModal, handleCloseModal } = useContext(ModalContext);
   const isIngridients = (item.ingridients.length && (
     <IngridientsList data={item.ingridients} />
   )) || <ReciepeIngridients />;

@@ -8,16 +8,14 @@ export const LoremSpace400300 = ({ hash }) => (
   />
 );
 
-export const Picsum400300 = () => (
-  <StyledImg
-    src={`https://picsum.photos/200/300/?random&t=${new Date().getTime()}`}
-    alt="picsum"
-  />
+export const Picsum400300 = ({ num }) => (
+  <StyledImg src={`https://picsum.photos/200/300/?random&t=${num}`} alt="picsum" />
 );
 
-export const isPicture = (pic, hashNum = 777) =>
+export const isPicture = (pic, num, hashNum = 777) =>
   pic ? (
     <StyledImg src={pic.url} alt="obrazek" />
   ) : (
-    <LoremSpace400300 hash={hashNum} />
+    // <LoremSpace400300 hash={hashNum} />
+    <Picsum400300 num={num} />
   );

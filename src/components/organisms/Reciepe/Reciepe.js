@@ -14,6 +14,7 @@ const Reciepe = ({
   time = 1,
   lvl,
   pic,
+  num,
   hashNum,
 }) => (
   <div>
@@ -22,7 +23,7 @@ const Reciepe = ({
         <b>{category.toUpperCase()}</b>
       </span>
     </MainLabel>
-    {isPicture(pic, hashNum)}
+    {isPicture(pic, num, hashNum)}
     <MainLabel>
       <span>{name}</span>
     </MainLabel>

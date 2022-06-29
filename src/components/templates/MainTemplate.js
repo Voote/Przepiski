@@ -1,34 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Landing from 'views/Landing';
+import useModal from 'components/organisms/Modal/useModal';
 import ReciepsMenu from 'components/molecules/ReciepsMenu/ReciepsMenu';
 import { useQuery } from 'graphql-hooks';
-import { options } from 'assets/arrays';
-import { UserContext } from 'hooks/userContext';
 import { Logo } from 'components/atoms/Logo/Logo';
+import { ModalContext } from 'hooks/userContext';
+import { MenuContext } from 'hooks/userContext';
 
 const MainTemplate = () => {
-  const [offset, setOffset] = useState(0);
-  const isScrollMoved = offset > 20;
+  const { menuOption } = useContext(MenuContext);
+  const { isOpen, handleOpenModal, handleCloseModal } = useModal();
 
-  useEffect(() => {
-    const onScroll = () => {
-      setOffset(window.pageYOffset);
-    };
-    // clean up code
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  // console.log({ offset, isScrollMoved });
-
-  const [selectedOption, setSelectedOption] = useState(options[0]);
   const query = `
   {
     allNewReciepes(orderBy: name_DESC, filter: {
       category: {
         matches: {
-          pattern: "${selectedOption.value}"}}}) {
+          pattern: "${menuOption.value}"}}}) {
       name
       category
       time
@@ -58,10 +46,10 @@ const MainTemplate = () => {
   return (
     <>
       <Logo title="logo" />
-      <UserContext.Provider value={{ selectedOption, setSelectedOption }}>
-        <ReciepsMenu />
-      </UserContext.Provider>
-      <Landing isScrolled={isScrollMoved} data={data.allNewReciepes} />
+      <ReciepsMenu isOpen={isOpen} />
+      <ModalContext.Provider value={{ isOpen, handleOpenModal, handleCloseModal }}>
+        <Landing data={data.allNewReciepes} />
+      </ModalContext.Provider>
     </>
   );
 };

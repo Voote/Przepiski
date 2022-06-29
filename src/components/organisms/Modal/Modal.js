@@ -4,8 +4,8 @@ import IngridientsList from 'components/molecules/IngridientsList/IngridientsLis
 import { MediumLabel, StyledModal } from 'components/organisms/Modal/Modal.styles';
 import { Button, VerticalButton } from 'components/atoms/Button/Button';
 import { isPicture } from 'components/atoms/ReciepeImg/ReciepeImg';
-import { loremIpsum2p } from 'assets/loremIpsum';
 import { bigFirstLetter } from 'helpers/helpers';
+import { loremIpsum2p } from 'assets/loremIpsum';
 
 const CustomModal = ({ handleClose, isOpen, children, reciepe }) => (
   <StyledModal

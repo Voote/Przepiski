@@ -1,21 +1,22 @@
 import React, { useContext } from 'react';
 import MenuIcon from 'components/atoms/MenuIcon/MenuIcon';
 import { options } from 'assets/arrays';
-import { UserContext } from 'hooks/userContext';
-import { LabelSection } from 'components/atoms/LabelSection/LabelSection';
+import { MenuContext, ScrollContext } from 'hooks/userContext';
 import { CustomReactSelect, Wrapper } from './ReciepsMenu.styles';
+import { LabelSection } from 'components/atoms/LabelSection/LabelSection';
 
-const ReciepsMenu = () => {
-  const data = useContext(UserContext);
+const ReciepsMenu = ({ isOpen }) => {
+  const { menuOption, setMenuOption } = useContext(MenuContext);
+  const { isScrollMoved } = useContext(ScrollContext);
 
   return (
-    <Wrapper>
+    <Wrapper isModalOpen={isOpen} isScrolled={isScrollMoved}>
       <LabelSection>
         <MenuIcon />
         <CustomReactSelect
           classNamePrefix={'Select'}
-          defaultValue={data.selectedOption}
-          onChange={data.setSelectedOption}
+          defaultValue={menuOption}
+          onChange={setMenuOption}
           options={options}
           menuColor="red"
         />
