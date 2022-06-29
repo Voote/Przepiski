@@ -14,3 +14,7 @@ export const StyledModal = styled(Modal)`
   padding: 1rem 3rem 1rem 1.5rem;
   z-index: 1031;
 `;
+
+export const MediumLabel = styled.h3`
+  text-align: center;
+`;

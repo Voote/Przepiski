@@ -6,5 +6,6 @@ module.exports = {
   parametersTime: 'Czas: ',
   parametersDificulty: 'Trudnosc:',
   clickMe: 'Click Me',
-  ButtonInstructions: 'Instructions',
+  buttonInstructions: 'Instructions',
+  buttonLabelClose: 'close',
 };

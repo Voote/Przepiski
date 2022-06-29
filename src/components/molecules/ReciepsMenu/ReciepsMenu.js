@@ -11,6 +11,7 @@ const ReciepsMenu = () => {
   return (
     <Wrapper>
       <LabelSection>
+        <MenuIcon />
         <CustomReactSelect
           classNamePrefix={'Select'}
           defaultValue={data.selectedOption}
@@ -18,7 +19,6 @@ const ReciepsMenu = () => {
           options={options}
           menuColor="red"
         />
-        <MenuIcon />
       </LabelSection>
     </Wrapper>
   );

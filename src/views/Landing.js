@@ -8,9 +8,9 @@ import Ingridients from 'components/organisms/Ingridients/Ingridients';
 const numGenerator = (max) => Math.floor(Math.random() * max);
 let number = numGenerator(100);
 
-const Landing = ({ data }) => (
-  <Wrapper>
-    {console.log(data)}
+const Landing = ({ data, isScrolled }) => (
+  <Wrapper isScrolled={isScrolled}>
+    {/* {console.log(data)} */}
     {data.map((reciepe) => {
       number = number * numGenerator(20);
       const hexNumber = number.toString(16) + 1;
@@ -21,10 +21,11 @@ const Landing = ({ data }) => (
             category={reciepe.category}
             time={reciepe.time}
             lvl={reciepe.level}
+            people={reciepe.people}
             pic={reciepe.picture}
             hashNum={hexNumber}
           />
-          <Ingridients ingridients={reciepe.ingridients} />
+          <Ingridients item={reciepe} />
         </BorderChin>
       );
     })}

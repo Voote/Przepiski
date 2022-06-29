@@ -2,9 +2,12 @@ import styled from 'styled-components';
 import Select from 'react-select';
 
 export const Wrapper = styled.div`
+  position: fixed;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.green};
   color: ${({ theme }) => theme.colors.white};
   padding: 0.1rem;
+  z-index: 1001;
   h2 {
     font-size: ${({ theme }) => theme.fontSize.l};
     font-weight: 500;

@@ -14,3 +14,10 @@ export const Picsum400300 = () => (
     alt="picsum"
   />
 );
+
+export const isPicture = (pic, hashNum = 777) =>
+  pic ? (
+    <StyledImg src={pic.url} alt="obrazek" />
+  ) : (
+    <LoremSpace400300 hash={hashNum} />
+  );

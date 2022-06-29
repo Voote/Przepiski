@@ -4,7 +4,7 @@ import {
   StyledListItem,
 } from 'components/molecules/IngridientsList/IngridientsList.styles';
 
-const IngridientList = ({ data }) => (
+const IngridienstList = ({ data }) => (
   <StyledList>
     {data.map((item) => (
       <li key={item.nazwaSkladnika}>
@@ -17,4 +17,4 @@ const IngridientList = ({ data }) => (
   </StyledList>
 );
 
-export default IngridientList;
+export default IngridienstList;
