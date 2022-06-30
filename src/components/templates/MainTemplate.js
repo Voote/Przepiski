@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
+import { useQuery } from 'graphql-hooks';
+import { MenuContext } from 'hooks/userContext';
+import { ModalContext } from 'hooks/userContext';
+import { Logo } from 'components/atoms/Logo/Logo';
 import Landing from 'views/Landing';
 import useModal from 'components/organisms/Modal/useModal';
 import ReciepsMenu from 'components/molecules/ReciepsMenu/ReciepsMenu';
-import { useQuery } from 'graphql-hooks';
-import { Logo } from 'components/atoms/Logo/Logo';
-import { ModalContext } from 'hooks/userContext';
-import { MenuContext } from 'hooks/userContext';
 
 const MainTemplate = () => {
   const { menuOption } = useContext(MenuContext);

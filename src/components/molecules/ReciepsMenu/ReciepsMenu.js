@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
-import MenuIcon from 'components/atoms/MenuIcon/MenuIcon';
 import { options } from 'assets/arrays';
 import { MenuContext, ScrollContext } from 'hooks/userContext';
-import { CustomReactSelect, Wrapper } from './ReciepsMenu.styles';
+import { CustomReactSelect, Navbar } from './ReciepsMenu.styles';
 import { LabelSection } from 'components/atoms/LabelSection/LabelSection';
+import MenuIcon from 'components/atoms/MenuIcon/MenuIcon';
 
 const ReciepsMenu = ({ isOpen }) => {
   const { menuOption, setMenuOption } = useContext(MenuContext);
   const { isScrollMoved } = useContext(ScrollContext);
 
   return (
-    <Wrapper isModalOpen={isOpen} isScrolled={isScrollMoved}>
+    <Navbar isModalOpen={isOpen} isScrolled={isScrollMoved}>
       <LabelSection>
         <MenuIcon />
         <CustomReactSelect
@@ -21,7 +21,7 @@ const ReciepsMenu = ({ isOpen }) => {
           menuColor="red"
         />
       </LabelSection>
-    </Wrapper>
+    </Navbar>
   );
 };
 

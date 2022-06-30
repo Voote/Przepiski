@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Select from 'react-select';
 
-export const Wrapper = styled.div`
+export const Navbar = styled.div`
   position: fixed;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.green};

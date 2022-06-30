@@ -11,7 +11,7 @@ let number = numGenerator(100);
 
 const Landing = ({ data }) => {
   const { isScrollMoved } = useContext(ScrollContext);
-  console.log(isScrollMoved);
+
   return (
     <Wrapper isScrolled={isScrollMoved}>
       {data.map((reciepe) => {
