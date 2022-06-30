@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { useQuery } from 'graphql-hooks';
 import { MenuContext } from 'hooks/userContext';
 import { ModalContext } from 'hooks/userContext';
